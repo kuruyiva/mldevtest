@@ -1,0 +1,26 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="countrynotallowed" translate="label" sortOrder="50">
+            <label><![CDATA[Country Not Allowed Message]]></label>
+        </tab>
+        <section id="countrynotallowed_content" translate="label" type="text" sortOrder="40" showInDefault="1"
+                 showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Country Not Allowed Message</label>
+            <tab>countrynotallowed</tab>
+            <resource>ML_DeveloperTest::config_extension</resource>
+            <group id="general" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Message to show the user</label>
+                <field id="messagetoshow" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Message to show users</label>
+                </field>
+                <field id="enable" translate="label comment" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Activate</label>
+                    <source_model>ML\DeveloperTest\Model\Config\Source\Activate</source_model>
+                    <comment>"Yes will switch this option off"</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
